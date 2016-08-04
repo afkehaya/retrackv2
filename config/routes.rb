@@ -7,6 +7,7 @@ Myapp::Application.routes.draw do
   get "/privacy"  => "landing#privacy"
   get "/terms"  => "landing#terms"
   get "/license"  => "landing#license"
+  get "/calculator"  => "landing#calculator"
   # All routes
   get "dashboards/dashboard_1"
   # get "dashboards/dashboard_2"

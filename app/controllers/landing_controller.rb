@@ -15,4 +15,7 @@ class LandingController < ApplicationController
     render :layout => "empty"
   end
 
+  def calculator
+    render :layout => "empty"
+  end
 end
