@@ -719,10 +719,17 @@ tr.bordered {
   height: auto;
 }
 .logo {
-  width: 30px;
-  height: 30px;
+  width: 75px;
+  height: 75px;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+  }
+  }
 .logolable {
   font-weight: 700;
   font-size: 20px;
