@@ -90,12 +90,12 @@ body.landing-page {
     padding: 15px 0;
   }
   .navbar-default {
-    background-color: transparent;
+    background-color: white;
     border-color: transparent;
     transition: all 0.3s ease-in-out 0s;
   }
   .navbar-default .nav li a {
-    color: #fff;
+    color: grey;
     font-family: 'Open Sans', helvetica, arial, sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
@@ -164,7 +164,6 @@ body.landing-page {
     border: none;
     background: inherit;
   }
-
   .nav > li > a {
     padding: 25px 10px 15px 10px;
   }
@@ -206,7 +205,7 @@ body.landing-page {
     text-align: center;
     background-color: #fff;
     background-image:
-    url("landing/iphonebg2");
+    url("landing/PCF_BG.jpg");
     background-position: center;
     background-attachment: scroll;
     background-repeat: no-repeat;
@@ -232,7 +231,7 @@ body.landing-page {
   /* Declare heights because of positioning of img element */
   .carousel .item {
     height: 470px;
-    background-color: #777;
+    background-color: #2F4050;
   }
   .carousel-inner > .item > img {
     position: absolute;
@@ -584,7 +583,9 @@ body.landing-page {
       left: 5%;
       top: 80px;
     }
-
+    .header-back.one {
+      display: none;
+    }
     .carousel-caption h1 {
       font-size: 28px;
     }
