@@ -540,7 +540,19 @@ body.landing-page {
   }
   /* RESPONSIVE CSS
   -------------------------------------------------- */
+
+  @media (max-width: 768px) {
+    // add margin to Assessment section to keep image from running over text-color
+    .mobile-features-margin {
+      margin-bottom: 10%;
+    }
+  }
+
   @media (min-width: 768px) {
+    // add margin to Assessment section to keep image from running over text-color
+    .mobile-features-margin {
+      margin-bottom: 10%;
+    }
     /* Navbar positioning foo */
     .navbar-wrapper {
       margin-top: 20px;
