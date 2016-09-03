@@ -2,7 +2,8 @@
 <div class="faq-page">
   <div id="calculator" class="container">
     <div class="jumbotron">
-       <p class="calculator-top">Calculate your approximate savings (if more than one property, group all properties together)!
+      <h2> Calculate your cash flow</h2>
+       <p>Calculate your approximate savings (if more than one property, group all properties together)!
        </br>This is strictly an approximation tool. You should also consult your tax advisor regarding your personal tax situation.</p>
       <div class="top panel panel-primary">
         <!-- Default panel contents -->
@@ -142,9 +143,225 @@
         </table>
         </div><!-- end table responsive -->
       </div><!-- end pannel -->
-        <h1> Increased Cash Flow = <span class="cash">0</span></h1>
        <button class="btn btn-lg btn-primary">Submit</button>
      </br>
+     <div class="hiden-copy"><!-- shows on submit -->
+     <div class="text-center">
+       <h1>YOU COULD BE EARNING</h1>
+       <h1 style="color:green;">$<span class="cash">0</span> </h1>
+       <h1>IN EXTRA CASHFLOW FROM YOUR PROPERTIES</h1>
+
+     </br>
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Mobile App To Help You Qualify</h2>
+          <h4>List how to qualify and app benefits here</h4>
+        </div>
+        <div class="col-lg-6">
+          <img src="<%= image_path('landing/iphone.jpg') %>" alt="dashboard" class="img-responsive">
+
+        </div>
+      </div>
+    </div>
+
+     <section id="pricing" class="pricing">
+     <div class="container">
+         <div class="row m-b-lg">
+             <div class="col-lg-12 text-center">
+                 <div class="navy-line"></div>
+                 <h1>Simple Pricing. No Hidden Fees.</h1>
+                 <h1>Free Upgrades. Period.</h1>
+                 <h2>Pre-order today to get 50% off </br> on each property for a full year!</h2>
+
+             </div>
+         </div>
+         <div class="row">
+             <div class="col-lg-4  wow zoomIn">
+             </div>
+
+             <div class="col-lg-4 wow zoomIn">
+                 <ul class="pricing-plan list-unstyled selected">
+                     <li class="pricing-title">
+                         $19.99
+
+                         <span class="pricing-text">per month</span>
+
+                     </li>
+                     <li class="pricing-desc">
+                         No surprises. No complicated list of features that cost extra. Everything you need to increase your cash flow from your real estate investments.
+                     <li>
+                         Mobile and Desktop Activity Tracking
+                     </li>
+                     <li>
+                        Cash Flow Calculator
+                     </li>
+                     <li>
+                         Real-Time Reporting
+                     </li>
+                     <li>
+                        Expense Tracking with Photo Uploads
+                     </li>
+                     <li class="plan-action">
+                     <a class="btn btn-primary btn-xs" data-ct-checkout="property-cash-flows.pre-order-19-99-month--3"href="#">Pre-Order</a>
+                     </li>
+                     <li class="pricing-title">
+                       <h4>Billed Annually</h4>
+                       <h3>Money Back Guarantee</h3>
+                     </li>
+                 </ul>
+
+             </div>
+
+             <div class="col-lg-4 hide wow zoomIn">
+
+             </div>
+         </div>
+         <div class="row m-t-lg">
+             <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg">
+             </div>
+         </div>
+     </div>
+
+     </section>
+   </div><!-- end first hidden copy section -->
+
       </div><!-- end jumbotron -->
     </div> <!-- end container -->
+    <div class="hiden-copy"> <!-- hidden copy section 2-->
+    <section id="contact" class="gray-section contact">
+    <div class="container">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+        <div class="row m-b-lg">
+            <div class="col-lg-3 col-lg-offset-3">
+                <address>
+                  <%= image_tag 'landing/pcf_favicon.png' %> <strong><span class="navy">Property Cash Flows</span></strong>
+
+                </address>
+            </div>
+            <div class="col-lg-4">
+                <p class="text-color">
+                  P.O. Box 781<br/>
+                  Santa Barbara, CA 93102
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                Contact Us Today @ <a href="mailto:info@propertycashflows.com">info@propertycashflows.com</a>
+                <p class="m-t-sm">
+                    Or follow us on social
+                </p>
+                <ul class="list-inline social-icon">
+                    <li><a href="https://twitter.com/propcashflows"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/propertycashflows"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/company/14973920?trk=vsrp_companies_res_name&trkInfo=VSRPsearchId%3A70600341470762074280%2CVSRPtargetId%3A14973920%2CVSRPcmpt%3Aprimary
+    "><i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                <p><strong>&copy; 2016 Property Cash Flows</strong></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 text-center m-t-lg m-b-lg">
+                <p>
+                  <%= link_to "FAQ", '/faq', class:"navy-link" %>
+                </p>
+            </div>
+            <div class="col-lg-3 text-center m-t-lg m-b-lg">
+                <p>
+                  <%= link_to "Terms of Service", '/terms', class:"navy-link" %>
+                </p>
+            </div>
+            <div class="col-lg-3 text-center m-t-lg m-b-lg">
+              <p><%= link_to "Software Licensing Agreement", '/license', class:"navy-link" %></p>
+            </div>
+            <div class="col-lg-3 text-center m-t-lg m-b-lg">
+
+                <p>
+                  <%= link_to "Privacy", '/privacy', class:"navy-link" %>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center m-t-sm disclaimer">
+          <p>Property Cash Flows does not provide tax advice. <br/> 
+            You should consult your tax and/or legal advisors before <br/>
+            implementing any transactions and/or strategies concerning your finances.</p>
+          </div>
+        </div>
+    </div>
+    </section>
+  </div><!-- end hidden copy section 2-->
   </div>
+  <% content_for :javascript do %>
+
+  <script type="text/javascript">
+
+
+  $(function() {
+
+      $('body').addClass('landing-page');
+      $('body').attr('id', 'page-top');
+
+      $('body').scrollspy({
+          target: '.navbar-fixed-top',
+          offset: 80
+      });
+
+      // Page scrolling feature
+      $('a.page-scroll').bind('click', function(event) {
+          var link = $(this);
+          $('html, body').stop().animate({
+              scrollTop: $(link.attr('href')).offset().top - 50
+          }, 500);
+          event.preventDefault();
+          $("#navbar").collapse('hide');
+      });
+
+      var cbpAnimatedHeader = (function() {
+          var docElem = document.documentElement,
+                  header = document.querySelector( '.navbar-default' ),
+                  didScroll = false,
+                  changeHeaderOn = 200;
+          function init() {
+              window.addEventListener( 'scroll', function( event ) {
+                  if( !didScroll ) {
+                      didScroll = true;
+                      setTimeout( scrollPage, 250 );
+                  }
+              }, false );
+          }
+          function scrollPage() {
+              var sy = scrollY();
+              if ( sy >= changeHeaderOn ) {
+                  $(header).addClass('navbar-scroll')
+              }
+              else {
+                  $(header).removeClass('navbar-scroll')
+              }
+              didScroll = false;
+          }
+          function scrollY() {
+              return window.pageYOffset || docElem.scrollTop;
+          }
+          init();
+
+      })();
+
+
+  });
+
+  </script>
+
+  <% end %>

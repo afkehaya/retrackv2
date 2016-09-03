@@ -41,7 +41,7 @@ $(document).ready(function(){
     $('.taxes_no_pcf').text(taxes_no_pcf * tax_percent);
     $('.cash-in-hand-no-pcf').text(adjusted_incom_no_pcf - taxes_no_pcf_total);
     $('.cash').text(cash_in_hand - cash_in_hand_no_pcf);
-
+    $('.hiden-copy').fadeIn("slow")
 
   });
 });
