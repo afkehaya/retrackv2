@@ -709,9 +709,9 @@ body.landing-page {
 @-moz-document url-prefix() {
   fieldset { display: table-cell; }
 }
-.top {
-  margin-top: 5em;
-}
+// .top {
+//   margin-top: 5em;
+// }
 .table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
     border: none !important;
 }
@@ -719,7 +719,9 @@ body.landing-page {
 tr.bordered {
     border-bottom: 1px solid #D3D3D3;
 }
-
+.calculator-top {
+  margin-top: 5em;
+}
 .pricing-text {
   font-size: 10px;
   color: white;

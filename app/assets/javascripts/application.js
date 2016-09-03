@@ -17,27 +17,31 @@ $(document).ready(function(){
   $('#calculator').on('click', 'button', function(){
     var price = +$('.propertyprice').val();
     var annual_rental_income = +$('.annual_rental_income').val();
-    var vacancy = +$('.vacancy').val();
-    var advertising = +$('.advertising').val();
-    var auto_travel = +$('.auto').val();
-    var cleaning_maintenance = +$('.cleaning').val();
-    var commissions = +$('.commissions').val();
-    var insurance = +$('.insurance').val();
-    var professional = +$('.professional');
-    var managment = +$('.managment').val();
-    var mortgage = +$('.mortgage').val();
-    var other_interest = +$('.other-interest').val();
-    var repairs = +$('.repairs').val();
-    var supplies = +$('.supplies').val();
-    var utilitites = +$('.utilities').val();
-    var other = +$('.other')
-    var depreciation = +$('.depreciation').val();
-    var depreciation_percent = +$('.depreciation-percent').val();
-    var tax_rate = +$('.tax-rate').val();
-    var principal = +$('.principal').val();
+    var expenses = +$('.expenses').val();
+    var income = +$('.income').val();
+    var depreciation_percent = 27.5;
+    var depreciation = price / depreciation_percent;
+    var net_income_or_loss = annual_rental_income - (depreciation + expenses);
+    var taxes = income - net_income_or_loss;
+    var tax_percent = .4;
+    var taxes_total = taxes * tax_percent;
+    var adjusted_income = income - net_income_or_loss;
+    var taxes_no_pcf = income - 25000;
+    var taxes_no_pcf_total = taxes_no_pcf * tax_percent;
+    var adjusted_incom_no_pcf = income - 25000;
+    var cash_in_hand = adjusted_income - taxes_total;
+    var cash_in_hand_no_pcf = adjusted_incom_no_pcf - taxes_no_pcf_total;
 
+    $('.depreciation').text(price / depreciation_percent);
+    $('.net_income_loss').text(annual_rental_income - (depreciation + expenses));
+    $('.adjusted_income').text(income - net_income_or_loss);
+    $('.taxes').text(taxes * tax_percent);
+    $('.cash-in-hand').text(adjusted_income - taxes_total);
+    $('.adjusted_income_no_pcf').text(income - 25000);
+    $('.taxes_no_pcf').text(taxes_no_pcf * tax_percent);
+    $('.cash-in-hand-no-pcf').text(adjusted_incom_no_pcf - taxes_no_pcf_total);
+    $('.cash').text(cash_in_hand - cash_in_hand_no_pcf);
 
-    $('.cash').text(price * annual_rental_income).slideIn(300);
 
   });
 });
