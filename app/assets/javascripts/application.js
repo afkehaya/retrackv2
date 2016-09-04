@@ -15,10 +15,10 @@
 
 $(document).ready(function(){
   $('#calculator').on('click', 'button', function(){
-    var price = +$('.propertyprice').val();
-    var annual_rental_income = +$('.annual_rental_income').val();
-    var expenses = +$('.expenses').val();
-    var income = +$('.income').val();
+    var price = +$('.propertyprice').val().replace(',', '.');
+    var annual_rental_income = +$('.annual_rental_income').val().replace(',', '.');
+    var expenses = +$('.expenses').val().replace(',', '.');
+    var income = +$('.income').val().replace(',', '.');
     var depreciation_percent = 27.5;
     var depreciation = price / depreciation_percent;
     var net_income_or_loss = annual_rental_income - (depreciation + expenses);
@@ -32,16 +32,29 @@ $(document).ready(function(){
     var cash_in_hand = adjusted_income - taxes_total;
     var cash_in_hand_no_pcf = adjusted_incom_no_pcf - taxes_no_pcf_total;
 
-    $('.depreciation').text(price / depreciation_percent);
-    $('.net_income_loss').text(annual_rental_income - (depreciation + expenses));
-    $('.adjusted_income').text(income - net_income_or_loss);
-    $('.taxes').text(taxes * tax_percent);
-    $('.cash-in-hand').text(adjusted_income - taxes_total);
-    $('.adjusted_income_no_pcf').text(income - 25000);
-    $('.taxes_no_pcf').text(taxes_no_pcf * tax_percent);
-    $('.cash-in-hand-no-pcf').text(adjusted_incom_no_pcf - taxes_no_pcf_total);
-    $('.cash').text(cash_in_hand - cash_in_hand_no_pcf);
+
+    var depreciation_value = price / depreciation_percent;
+    var net_income_loss_value = annual_rental_income - (depreciation + expenses);
+    var adjusted_income_value = income - net_income_or_loss;
+    var taxes_value = taxes * tax_percent;
+    var cash_in_hand_value = adjusted_income - taxes_total;
+    var adjusted_income_no_pcf_value = income - 25000
+    var taxes_no_pcf_vlaue = taxes_no_pcf * tax_percent;
+    var cash_in_hand_no_pcf_value = adjusted_incom_no_pcf - taxes_no_pcf_total;
+    var cash_value = cash_in_hand - cash_in_hand_no_pcf;
+
+    $('.depreciation').text(depreciation_value.toFixed(2));
+    $('.net_income_loss').text(net_income_loss_value.toFixed(2));
+    $('.adjusted_income').text(adjusted_income_value.toFixed(2));
+    $('.taxes').text(taxes_value.toFixed(2));
+    $('.cash-in-hand').text(cash_in_hand_value.toFixed(2));
+    $('.adjusted_income_no_pcf').text(adjusted_income_no_pcf_value.toFixed(2));
+    $('.taxes_no_pcf').text(taxes_no_pcf_vlaue.toFixed(2));
+    $('.cash-in-hand-no-pcf').text(cash_in_hand_no_pcf_value.toFixed(2));
+    $('.cash').text(cash_value.toFixed(2));
     $('.hiden-copy').fadeIn("slow")
+
+
 
   });
 });
