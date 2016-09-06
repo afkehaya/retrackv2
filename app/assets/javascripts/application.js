@@ -15,10 +15,10 @@
 
 $(document).ready(function(){
   $('#calculator').on('click', 'button', function(){
-    var price = +$('.propertyprice').val().replace(',', '.');
-    var annual_rental_income = +$('.annual_rental_income').val().replace(',', '.');
-    var expenses = +$('.expenses').val().replace(',', '.');
-    var income = +$('.income').val().replace(',', '.');
+    var price = +$('.propertyprice').val().replace(",","");
+    var annual_rental_income = +$('.annual_rental_income').val().replace(",","");
+    var expenses = +$('.expenses').val().replace(",","");
+    var income = +$('.income').val().replace(",","");
     var depreciation_percent = 27.5;
     var depreciation = price / depreciation_percent;
     var net_income_or_loss = annual_rental_income - (depreciation + expenses);
